@@ -2,13 +2,13 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
 
-import {Listbox, ListboxItem, ListboxSection, cn} from "@nextui-org/react";
-import {ListboxWrapper} from "../../../components/ListBox/ListboxWrapper";
-import {AddNoteIcon} from "../../../components/ListBox/AddNoteIcon.jsx";
-import {CopyDocumentIcon} from "../../../components/ListBox/CopyDocumentIcon.jsx";
-import {EditDocumentIcon} from "../../../components/ListBox/EditDocumentIcon.jsx";
-import {DeleteDocumentIcon} from "../../../components/ListBox/DeleteDocumentIcon.jsx";
-import {Button} from "@nextui-org/react";
+import { Listbox, ListboxItem, ListboxSection, cn } from "@nextui-org/react";
+import { ListboxWrapper } from "../../../components/ListBox/ListboxWrapper";
+import { AddNoteIcon } from "../../../components/ListBox/AddNoteIcon.jsx";
+import { CopyDocumentIcon } from "../../../components/ListBox/CopyDocumentIcon.jsx";
+import { EditDocumentIcon } from "../../../components/ListBox/EditDocumentIcon.jsx";
+import { DeleteDocumentIcon } from "../../../components/ListBox/DeleteDocumentIcon.jsx";
+import { Button } from "@nextui-org/react";
 
 
 
@@ -21,10 +21,11 @@ const CurriculumScreen = () => {
   };
 
   return (
-      <Layout>
+    <Layout>
       <ListboxWrapper>
-      <Listbox variant="faded" aria-label="Listbox menu with sections" className=''>
-        <ListboxSection title="Week 1" className='text-black'>  
+        <div className="flex flex-col space-y-4">
+          <Listbox variant="faded" aria-label="Listbox menu with sections" className=''>
+        <ListboxSection title="Week 1" className='text-black'>
           <ListboxItem
             key="new"
             description="Create a new file"
@@ -46,8 +47,8 @@ const CurriculumScreen = () => {
           >
             Edit file
           </ListboxItem>
-        </ListboxSection> 
-        <ListboxSection title="Week 3">  
+        </ListboxSection>
+        <ListboxSection title="Week 3">
           <ListboxItem
             key="delete"
             //className="text-danger"
@@ -56,21 +57,10 @@ const CurriculumScreen = () => {
           >
             Delete file
           </ListboxItem>
-        </ListboxSection> 
-        <ListboxSection title="Week 3">  
-          <ListboxItem
-            key="delete"
-            //className="text-danger"
-            description="Permanently delete the file"
-            startContent={<DeleteDocumentIcon className={cn(iconClasses, "text-danger")} />}
-          >
-            Delete file
-          </ListboxItem>
-        </ListboxSection> 
-      </Listbox>
-
-      <Listbox variant="faded" aria-label="Listbox menu with sections" className=''>
-        <ListboxSection title="Week 2" className=''>  
+        </ListboxSection>
+          </Listbox>
+          <Listbox ariant="faded" aria-label="Listbox menu with sections" className=''>
+        <ListboxSection title="Week 2" className=''>
           <ListboxItem
             key="new"
             description="Create a new file"
@@ -92,8 +82,8 @@ const CurriculumScreen = () => {
           >
             Edit file
           </ListboxItem>
-        </ListboxSection> 
-        <ListboxSection title="Week 4">  
+        </ListboxSection>
+        <ListboxSection title="Week 4">
           <ListboxItem
             key="delete"
             //className="text-danger"
@@ -102,10 +92,11 @@ const CurriculumScreen = () => {
           >
             Delete file
           </ListboxItem>
-        </ListboxSection> 
-      </Listbox>
-    </ListboxWrapper>
-      </Layout>
+        </ListboxSection>
+          </Listbox>
+        </div>
+      </ListboxWrapper>
+    </Layout>
   );
 };
 
