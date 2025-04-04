@@ -23,8 +23,5 @@ export default function RootLayout({
         </SessionProvider>
       </body>
     </html>
-    // <html lang="en">
-    //   <body className={inter.className}>{children}</body>
-    // </html>
   )
 }
