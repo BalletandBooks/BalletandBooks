@@ -12,3 +12,27 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+// 'use client';
+// import { useEffect } from 'react';
+// import { useRouter } from 'next/navigation';
+
+// export default function Home() {
+//   const router = useRouter();
+
+//   useEffect(() => {
+//     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+//     if (!isLoggedIn) {
+//       router.replace('/login');
+//     }
+//   }, [router]);
+
+//   return (
+//     <div>
+//       <h1>Welcome to Home!</h1>
+//       {/* Your protected content */}
+//     </div>
+//   );
+// }
+
+// Throw all pages inside the home folder, so we don't need 
