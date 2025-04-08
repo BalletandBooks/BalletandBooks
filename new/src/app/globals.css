@@ -24,3 +24,149 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+body, html {
+  margin: 0;
+  font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+  background: #1ea3cc;
+}
+
+.navbar {
+  width: 100%;
+  background: #58B4D1;
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: center; /* Center the nav links container */
+}
+
+.logo-container {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.logo-image {
+  max-width: 100px;
+  max-height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  /* This container is now centered in the navbar */
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+a {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 10px;
+  position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Profile section styles */
+.profile-container {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row; /* Ensure horizontal alignment */
+  align-items: center;
+}
+
+.profile-container a {
+  display: flex; /* Ensure the link wraps its content properly */
+  flex-direction: row; /* Maintain horizontal alignment */
+  align-items: center; /* Center items vertically */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  margin-left: 1em;
+  margin-right: 1em;
+  border: 2px solid #ffb706;
+}
+
+.profile-name {
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* For smaller screens */
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .logo-container {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  
+  .nav-links li {
+    margin: 5px 10px;
+  }
+  
+  .profile-container {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
