@@ -13,8 +13,8 @@ const Nav: React.FC = () => {
     <nav className="navbar">
       <div className="logo-container">
       <a href="/home">
-    <img src={balletAndBooks.src} alt="Logo" className="logo-image" />
-  </a>
+      <img src={balletAndBooks.src} alt="Logo" className="logo-image" />
+      </a>
       </div>
 
       <ul className="nav-links">
