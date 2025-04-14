@@ -5,7 +5,7 @@ import balletAndBooks from '../assets/logo.png.webp';
 
 const mockUser = {
   name: 'I\'m a parent',
-  role: 'parent', // change to 'admin' for testing
+  role: 'admin', // change to 'admin' for testing
 };
 
 const Nav: React.FC = () => {
