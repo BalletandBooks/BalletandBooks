@@ -4,7 +4,7 @@ import '../src/app/globals.css'; // Adjust the path as necessary
 import balletAndBooks from '../assets/logo.png.webp';
 
 const mockUser = {
-  name: 'I\'m a parent',
+  name: 'I\'m an admin',
   role: 'admin', // change to 'admin' for testing
 };
 
