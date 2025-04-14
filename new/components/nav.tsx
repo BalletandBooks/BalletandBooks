@@ -12,7 +12,9 @@ const Nav: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="logo-container">
-        <img src={balletAndBooks.src} alt="Logo" className="logo-image" />
+      <a href="/home">
+    <img src={balletAndBooks.src} alt="Logo" className="logo-image" />
+  </a>
       </div>
 
       <ul className="nav-links">
