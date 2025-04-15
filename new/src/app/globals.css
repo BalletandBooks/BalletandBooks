@@ -1,4 +1,17 @@
+/* for page headings*/
+/* Ensure you import the Bellotta font */
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@700&display=swap');
+
 @import "tailwindcss";
+
+/* Styling for bold 64pt Bellotta text */
+.page-heading {
+  font-family: 'Bellota', cursive;
+  font-weight: 700; /* Bold weight */
+  font-size: 40pt; /* Font size */
+  line-height: 1.2; /* Optional: Adjust line height */
+  color: #000000; /* Optional: Set text color */
+}
 
 :root {
   --background: #ffffff;
@@ -29,7 +42,9 @@ body {
 body, html {
   margin: 0;
   font: bold 14px/1.4 'Open Sans', arial, sans-serif;
-  background: #1ea3cc;
+  /*background: #1ea3cc;*/
+  /* why is background blue?*/
+
 }
 
 .navbar {
@@ -169,4 +184,66 @@ a:hover {
     justify-content: center;
     margin-top: 10px;
   }
+}
+
+/* curriculum screen styles */
+
+.curriculum-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.dropdown-button {
+  padding: 15px;
+  background-color: #FB8500;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-content {
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-content ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Table Styles within curriculum */
+.modules-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.modules-table th,
+.modules-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.modules-table th {
+  background-color: #FB8500;
+  color: white;
+  font-weight: bold;
+}
+
+.modules-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.modules-table tr:hover {
+  background-color: #f1f1f1;
 }
