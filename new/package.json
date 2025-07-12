@@ -9,23 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@aws-amplify/backend": "^1.14.3",
-    "@aws-amplify/backend-cli": "^1.5.0",
+    "aws-amplify": "^6.15.3",
     "@nextui-org/react": "^2.6.11",
-    "@tailwindcss/vite": "^4.0.15",
     "next": "15.2.4",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^1.16.1",
+    "@aws-amplify/backend-cli": "^1.8.0",
+    "aws-cdk-lib": "^2.189.1",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.25.6",
     "@tailwindcss/postcss": "^4",
+    "tsx": "^4.20.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.0.15",
+    "@tailwindcss/vite": "^4.0.15",
     "typescript": "^5"
   }
 }
