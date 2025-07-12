@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import NavBar from '../../../components/nav';
+import NavBar from '../../../components/Nav';
 import '../globals.css'; // Adjust the path as necessary
 
 const CurriculumPage = () => {
