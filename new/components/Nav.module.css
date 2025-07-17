@@ -1,0 +1,103 @@
+.navbar {
+  width: 100%;
+  background: #58B4D1;
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: center; /* Center the nav links container */
+}
+
+.logoContainer {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.logoImage {
+  max-width: 100px;
+  max-height: 50px;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  /* This container is now centered in the navbar */
+}
+
+.navLinks li {
+  margin: 0 15px;
+}
+
+.navLink {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 10px;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navLink:hover {
+  opacity: 0.8;
+}
+
+/* For smaller screens */
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .logoContainer {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navLinks {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  
+  .navLinks li {
+    margin: 5px 10px;
+  }
+  
+  .profileContainer {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}

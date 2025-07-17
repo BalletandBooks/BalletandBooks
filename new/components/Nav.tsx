@@ -1,47 +1,47 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import '../src/app/globals.css'; // Adjust the path as necessary
+import styles from './Nav.module.css';
 import balletAndBooks from '../assets/logo.png.webp';
 
 const mockUser = {
   name: "I'm an admin",
-  role: 'admin', // change to 'admin' for testing
+  role: 'admin', // change to 'parent' for testing
 };
 
 const Nav: React.FC = () => {
   return (
-    <nav className="navbar">
-      <div className="logo-container">
-        <Link href="/home">
-          <img src={balletAndBooks.src} alt="Logo" className="logo-image" />
+    <nav className={styles.navbar}>
+      <div className={styles.logoContainer}>
+        <Link href="/home" className={styles.navLink}>
+          <img src={balletAndBooks.src} alt="Logo" className={styles.logoImage} />
         </Link>
       </div>
 
-      <ul className="nav-links">
+      <ul className={styles.navLinks}>
         {mockUser.role === 'admin' && (
           <>
-            <li><Link href="/curriculum">Curriculum</Link></li>
-            <li><Link href="/students">Students</Link></li>
-            <li><Link href="/training">Training</Link></li>
-            <li><Link href="/documents">Documents</Link></li>
-            <li><Link href="/calendar">Calendar</Link></li>
+            <li><Link href="/curriculum" className={styles.navLink}>Curriculum</Link></li>
+            <li><Link href="/students" className={styles.navLink}>Students</Link></li>
+            <li><Link href="/training" className={styles.navLink}>Training</Link></li>
+            <li><Link href="/documents" className={styles.navLink}>Documents</Link></li>
+            <li><Link href="/calendar" className={styles.navLink}>Calendar</Link></li>
           </>
         )}
 
         {mockUser.role === 'parent' && (
           <>
-            <li><Link href="/curriculum">Curriculum</Link></li>
-            <li><Link href="/documents">Documents</Link></li>
-            <li><Link href="/calendar">Calendar</Link></li>
+            <li><Link href="/curriculum" className={styles.navLink}>Curriculum</Link></li>
+            <li><Link href="/documents" className={styles.navLink}>Documents</Link></li>
+            <li><Link href="/calendar" className={styles.navLink}>Calendar</Link></li>
           </>
         )}
       </ul>
 
-      <div className="profile-container">
-        <Link href="/profile">
-          <span className="profile-name">{mockUser.name}</span>
-          <div className="profile-picture" />
+      <div className={styles.profileContainer}>
+        <Link href="/profile" className={styles.navLink}>
+          <span className={styles.profileName}>{mockUser.name}</span>
+          <div className={styles.profilePicture} />
         </Link>
       </div>
     </nav>

@@ -1,0 +1,59 @@
+.curriculumContainer {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.dropdownButton {
+  padding: 15px;
+  background-color: #FB8500;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdownContent {
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdownContent ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Table Styles */
+.modulesTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.modulesTable th,
+.modulesTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.modulesTable th {
+  background-color: #FB8500;
+  color: white;
+  font-weight: bold;
+}
+
+.modulesTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.modulesTable tr:hover {
+  background-color: #f1f1f1;
+}

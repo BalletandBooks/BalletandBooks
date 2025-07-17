@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import '../globals.css'; // Adjust the path as necessary
+import styles from './page.module.css';
 
 const CurriculumPage = () => {
   const [isTableVisible, setIsTableVisible] = useState(false);
@@ -17,16 +17,17 @@ const CurriculumPage = () => {
 
   return (
     <div>
-      <h1 className = "page-heading">Curriculum</h1>
+      <h1 className={styles.pageHeading}>Curriculum</h1>
+
       {/* Collapsible Button */}
-      <button className="dropdown-button" onClick={toggleTableVisibility}>
+      <button className={styles.dropdownButton} onClick={toggleTableVisibility}>
         {isTableVisible ? 'Hide Modules' : 'Week 1'}
       </button>
 
       {/* Collapsible Table */}
       {isTableVisible && (
-        <div className="curriculum-container">
-          <table className="modules-table">
+        <div className={styles.curriculumContainer}>
+          <table className={styles.modulesTable}>
             <thead>
               <tr>
                 <th>Module Name</th>
