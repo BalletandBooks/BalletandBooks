@@ -8,6 +8,8 @@ import Nav from "./Nav";
 
 Amplify.configure(outputs);
 
+
+
 export default function AmplifyProvider(
   { children }: { children: React.ReactNode }
   ) {
