@@ -1,10 +1,8 @@
 import React from 'react';
-import NavBar from '../../../components/Nav';
 
 const CalendarScreen = () => {
   return (
     <div>
-      <NavBar />
       <div style={{ padding: '20px' }}>
         <h1>Calendar</h1>
         <iframe

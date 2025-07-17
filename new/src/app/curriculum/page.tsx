@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import NavBar from '../../../components/Nav';
 import '../globals.css'; // Adjust the path as necessary
 
 const CurriculumPage = () => {
@@ -18,7 +17,6 @@ const CurriculumPage = () => {
 
   return (
     <div>
-      <NavBar />
       <h1 className = "page-heading">Curriculum</h1>
       {/* Collapsible Button */}
       <button className="dropdown-button" onClick={toggleTableVisibility}>
