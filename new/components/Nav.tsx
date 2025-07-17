@@ -1,10 +1,11 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import '../src/app/globals.css'; // Adjust the path as necessary
 import balletAndBooks from '../assets/logo.png.webp';
 
 const mockUser = {
-  name: 'I\'m an admin',
+  name: "I'm an admin",
   role: 'admin', // change to 'admin' for testing
 };
 
@@ -12,37 +13,37 @@ const Nav: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="logo-container">
-      <a href="/home">
-      <img src={balletAndBooks.src} alt="Logo" className="logo-image" />
-      </a>
+        <Link href="/home">
+          <img src={balletAndBooks.src} alt="Logo" className="logo-image" />
+        </Link>
       </div>
 
       <ul className="nav-links">
         {mockUser.role === 'admin' && (
           <>
-            <li><a href="/curriculum">Curriculum</a></li>
-            <li><a href="/students">Students</a></li>
-            <li><a href="/training">Training</a></li>
-            <li><a href="/documents">Documents</a></li>
-            <li><a href="/calendar">Calendar</a></li>
+            <li><Link href="/curriculum">Curriculum</Link></li>
+            <li><Link href="/students">Students</Link></li>
+            <li><Link href="/training">Training</Link></li>
+            <li><Link href="/documents">Documents</Link></li>
+            <li><Link href="/calendar">Calendar</Link></li>
           </>
         )}
 
         {mockUser.role === 'parent' && (
           <>
-            <li><a href="/curriculum">Curriculum</a></li>
-            <li><a href="/documents">Documents</a></li>
-            <li><a href="/calendar">Calendar</a></li>
+            <li><Link href="/curriculum">Curriculum</Link></li>
+            <li><Link href="/documents">Documents</Link></li>
+            <li><Link href="/calendar">Calendar</Link></li>
           </>
         )}
       </ul>
 
-    <div className="profile-container">
-      <a href="/profile">
-        <span className="profile-name">{mockUser.name}</span>
-        <div className="profile-picture" />
-      </a>
-    </div>
+      <div className="profile-container">
+        <Link href="/profile">
+          <span className="profile-name">{mockUser.name}</span>
+          <div className="profile-picture" />
+        </Link>
+      </div>
     </nav>
   );
 };
