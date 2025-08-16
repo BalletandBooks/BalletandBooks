@@ -1,4 +1,5 @@
 import { defineAuth } from '@aws-amplify/backend';
+import { postConfirmation } from "./post-confirmation/resource"
 
 /**
  * Define and configure your auth resource
@@ -13,7 +14,11 @@ export const auth = defineAuth({
     mode: 'OPTIONAL',
     totp: true,
   },
-  groups: ["ADMINS", "VOLUNTEERS, PARTICIPANTS"],
+  groups: ["ADMINS", "VOLUNTEERS", "PARTICIPANTS"],
+  // trigger to automatically assign a user to the correct cognito group once signed up
+  triggers: {
+    postConfirmation,
+  },
   // Things a user can/is required to enter on signup
   userAttributes: {
     "custom:role": {
